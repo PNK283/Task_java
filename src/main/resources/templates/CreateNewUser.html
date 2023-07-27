@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org/">
-
 <head>
 	<title>Register Page</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
@@ -8,27 +8,24 @@
 </head>
 
 <body>
+<div>
+	<h3><b>CRM - Customer Relationship Manager</b></h3>
+	<form th:action="@{/employee/create}" method="POST">
+		<label for="firstName">FIRSTNAME</label>
+		<input type="text" name="firstName" id="firstName" class="form-control" />
 
+		<label for="lastName">LASTNAME</label>
+		<input type="text" name="lastName" id="lastName" class="form-control" />
 
+		<label for="Email">EMAIL</label>
+		<input type="text" name="Email" id="Email" class="form-control" />
 
-	
-				<h3><b>CRM - Customer Relationship manager </h3>
-			
-				<form th:action="@{/employee/create}" method="POST">
-					
-					FIRSTNAME  <input type="text" name="firstName" class="form-control" />
-					LASRNAME  <input type="text" name="lastName" class="form-control" />
-					EMAIL  <input type="text" name="Email" class="form-control" />
-					 <br/>
-					<input type="submit" value="Create" class="btn btn-info" />
-				</form>
-			</div>
-			<div class="card-footer bg-success text-center text-white" th:if="${message}">
-				[[${message}]]
-			</div>
-		</div>
-		<!--card  ends-->
-	
+		<br/>
+		<input type="submit" value="Create" class="btn btn-info" />
+	</form>
+</div>
+<div class="card-footer bg-success text-center text-white" th:if="${message}">
+	[[${message}]]
+</div>
 </body>
-
 </html>

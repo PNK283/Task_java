@@ -27,6 +27,7 @@ public class CustomerController {
 
 	@GetMapping({ "/register", "/" })
 	public String showRegsiter() {
+
 		return "Register";
 	}
 
